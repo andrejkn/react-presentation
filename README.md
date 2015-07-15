@@ -25,6 +25,14 @@ Props
 
 State
 -----
+- Components === State Machines
+..- UI Consistency
+..- Update states ==> rerendering the component
+..- updating the DOM
+- What are component state?
+- What should go in state?
+- What should NOT go in state?
+
 
 JSX
 ===
@@ -49,5 +57,18 @@ Built-in factorie
 -----------------
 
 > React.DOM.div(...);
+
+Event Handling
+==============
+
+- Synthetic Events
+React ensures that all events behave identically across browsers
+
+- Autobinding
+methods are automatically bound to component instances
+and methods are cached
+
+- Event Delegation
+explain how it works in React...
 
 
