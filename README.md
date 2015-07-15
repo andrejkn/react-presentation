@@ -26,9 +26,9 @@ Props
 State
 -----
 - Components === State Machines
-..- UI Consistency
-..- Update states ==> rerendering the component
-..- updating the DOM
+..* UI Consistency
+..* Update states ==> rerendering the component
+..* updating the DOM
 - What are component state?
 - What should go in state?
 - What should NOT go in state?
