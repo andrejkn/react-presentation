@@ -9,6 +9,17 @@ Why ReactJS?
 React Components
 ================
 
+```javascript
+  var MyComponent = React.createClass({
+    render: function() {
+      return (
+        <p>
+          My App Component
+        </p>
+      );
+    }
+  });
+```
 Props
 -----
 
