@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="/bower_components/react/react.js"></script>
+
+    <!-- Using the in-browser JSX transformer -->
+    <script src="/bower_components/react/JSXTransformer.js"></script>
+  </head>
+
+  <body>
+    <h2>
+      Shapes App
+    </h2>
+    <div id="ShapesApp"></div>
+    <script type="text/jsx">
+
+      var MyComponent = React.createClass({
+        render: function() {
+          return (
+            <p>
+              My App Component
+            </p>
+          );
+        }
+      });
+
+      React.render(<MyComponent />,
+        document.getElementById('ShapesApp'));
+    </script>
+  </body>
+</html>

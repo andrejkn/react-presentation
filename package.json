@@ -1,0 +1,14 @@
+{
+  "name": "react-presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./"
+  },
+  "author": "Andrej Knezevski",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "*"
+  }
+}

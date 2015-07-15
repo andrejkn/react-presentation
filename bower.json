@@ -1,0 +1,13 @@
+{
+  "name": "react-presentation",
+  "version": "0.0.1",
+  "authors": [
+    "Andrej Knezevski <andrej@rangle.io>"
+  ],
+  "description": "ReactJS Presentation",
+  "license": "MIT",
+  "dependencies" : {
+    "react": "*",
+    "react-tools": "*"
+  }
+}
