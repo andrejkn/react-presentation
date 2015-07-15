@@ -71,4 +71,8 @@ and methods are cached
 - Event Delegation
 explain how it works in React...
 
+Virtual DOM
+===========
 
+FLUX
+====
