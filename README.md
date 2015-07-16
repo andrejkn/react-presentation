@@ -20,27 +20,27 @@ React Components
     }
   });
 ```
-Component's Life Cycle
----------------------
-- Component Specifications
-  - render
-  - getInitialState()
-  - getDefaultProps()
-  - propTypes()
-  - mixins [decarted]
-  - static
-  - displayName
+Component Specifications
+------------------------
+- render
+- getInitialState()
+- getDefaultProps()
+- propTypes()
+- mixins [decarted]
+- static
+- displayName
 
-- Lifecycle Methods
-  - Mounting
-    - componentWillMount()
-    - componentDidMount()
-  - Updating
-    - componentWillReceiveProps()
-    - shouldComponentUpdate()
-    - componentWillUpdate()
-    - componentDidUpdate()
-    - componentWillUnmount()
+Lifecycle Methods
+-----------------
+- Mounting
+  - componentWillMount()
+  - componentDidMount()
+- Updating
+  - componentWillReceiveProps()
+  - shouldComponentUpdate()
+  - componentWillUpdate()
+  - componentDidUpdate()
+  - componentWillUnmount()
 
 Props
 -----
