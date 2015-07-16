@@ -26,7 +26,7 @@ Component Specifications
 - getInitialState()
 - getDefaultProps()
 - propTypes()
-- mixins [debrecated]
+- mixins [deprecated]
 - static
 - displayName
 
