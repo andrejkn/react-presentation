@@ -6,9 +6,10 @@ var LightBulb = React.createClass({
   },
 
   render: function() {
+    console.log('light-bulb: render ', this.props.isLightOn);
     return (
-      <img onClick={this._handleClick.bind(this)}
-           src={this._getImageSource.bind(this).call()} />
+      <img onClick={this._handleClick}
+           src={this._getImageSource()} />
     );
   },
 
@@ -16,10 +17,15 @@ var LightBulb = React.createClass({
     var lightBulbOff = "/code-examples/circuit/images/lightbulb_off.png";
     var lightBulbOn = "/code-examples/circuit/images/lightbulb_on.png";
 
-    return this.state.isOn ? lightBulbOn : lightBulbOff;
+    return this._switchLight() ? lightBulbOn : lightBulbOff;
+  },
+
+  _switchLight: function() {
+    return this.props.isLightOn;
   },
 
   _handleClick: function() {
+    console.log('light-bulb: click ', !this.state.isOn);
     this.setState({
       isOn: !this.state.isOn
     });
