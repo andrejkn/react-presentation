@@ -8,8 +8,14 @@ var CircuitBoard = React.createClass({
   },
 
   render: function() {
+    var circuitStyle = {
+      backgroundColor: this._backgroundColor(),
+      width: '100%',
+      height: '1000px'
+    };
+
     return (
-      <div>
+      <div style={circuitStyle}>
         <LightBulb isLightOn={this.state.isLightBulbOn} />
         <Switch clickHandler={this._lightBulbSwitch} />
       </div>
@@ -22,6 +28,13 @@ var CircuitBoard = React.createClass({
     this.setState({
       isLightBulbOn: !this.state.isLightBulbOn
     });
+  },
+
+  _backgroundColor: function() {
+    var backgroundColorOff = '#000000';
+    var backgroundColorOn = '#fffef8';
+    return this.state.isLightBulbOn ?
+      backgroundColorOn : backgroundColorOff;
   }
 });
 
