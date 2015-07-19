@@ -2,13 +2,24 @@
 
 What is ReactJS?
 ================
+- React is a JS library for creating UIs.
+- Created by Facebook
+- Used to create component
+- Lots of people use React as the V in MVC
+- It is NOT a template library (handlebar.js, mustache.js, ...)
 
 Why ReactJS?
 ============
+- It is alternative to EVENT-BASED and DATA BINDING approaches
+- Avoids keeping track of which callback gets called first
+- COMPONENTS
+  - Re-rendering every time a change is made
+  - Easier to reason about
+- Improved performance
 
 React Components
 ================
-
+Here's a sample React component:
 ```javascript
   var MyComponent = React.createClass({
     render: function() {
