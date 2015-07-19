@@ -106,6 +106,40 @@ explain how it works in React...
 
 Virtual DOM
 ===========
+- solution for unpredictable UI
+- Data binding?
+- bind data model to view
+- non trivial abstraction
+
+- key-value observation
+- observables & computed properties
+- observables - values which when are changed
+they notify other observables
+computed properties - are observables which contain
+the computed change
+- problem with this system is that it needs to
+maintain a dependency graph of observable and computed graphs
+
+- vDOM - no need for observables
+- whenever change occurs => re-render everything to a vDOM representation
+- DIFF the previous vDOM with the latest
+- Update the real DOM with ONLY the changed stuff
+
+Performance:
+O(v) O(m)
+v - size of view
+m - size of models
+v << m
+
+- data binding:
+memory: O(m)
+runtime: O(1)
+- vDOM
+memory: O(v)
+runtime: O(v)
+
+We can do caching:
+- bring down the runtime
 
 FLUX
 ====
