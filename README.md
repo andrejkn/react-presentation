@@ -1,5 +1,5 @@
 # ReactJS
-![alt text](https://github.com/andrejkn/react-presentation/images/react-strong.png "ReactJS")
+![alt text](https://github.com/andrejkn/react-presentation/blob/master/images/react-strong.png "ReactJS")
 
 What is ReactJS?
 ================
