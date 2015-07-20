@@ -74,8 +74,8 @@ which renders a list of items:
 ![alt text](https://github.com/andrejkn/react-presentation/blob/master/images/todo/todo1.png "List App")
 
 We can split this into 2 component:
-1. List
-2. Item
+  1. List
+  2. Item
 
 
 ![alt text](https://github.com/andrejkn/react-presentation/blob/master/images/todo/todo2.png "List App")
