@@ -124,6 +124,8 @@ Props
 Before we go any further with the List example,
 let's look at Component Properties.
 
+- Think of Components as Functions and props as parameters for that function
+
 ```javascript
 var pos = {
   x: 123,
@@ -135,7 +137,7 @@ var myComp = <MyComponent color={'green'}
                           y={pos.y} />
 ```
 
-### Spread Attrinutes
+#### Spread Attributes
 
 - JSX feature
 - Using the ... operator for arrays
@@ -217,7 +219,6 @@ var myComp = <MyComponent color='green'
 myComp.props.x = 23; // Not a good idea!
 ```
 
-
 State
 -----
 - Components === State Machines
@@ -228,6 +229,60 @@ State
 - What should go in state?
 - What should NOT go in state?
 
+> simple-switch.jsx
+
+```javascript
+var SimpleSwitch = React.createClass({
+  getInitialState: function() {
+    return {
+      isOn: false
+    };
+  },
+
+  render: function() {
+    return (
+      <img onClick={this._handleClick}
+           src={this._getImageSource()} />
+    );
+  },
+
+  _getImageSource: function() {
+    var switchOff = "/code-examples/circuit/images/switch_off.png";
+    var switchOn = "/code-examples/circuit/images/switch_on.png";
+
+    return this.state.isOn ? switchOn : switchOff;
+  },
+
+  _handleClick: function() {
+    this.setState({
+      isOn: !this.state.isOn
+    });
+  }
+});
+
+
+React.render(<SimpleSwitch />, document.getElementById('simpleSwitchApp'));
+```
+
+> simple-switch.html
+
+```html
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link href="./styles/circuit.css" rel="stylesheet" />
+    <script src="/bower_components/react/react.js"></script>
+    <script src="/bower_components/react/JSXTransformer.js"></script>
+    <script type="text/jsx" src="./components/simple-switch.jsx"></script>
+  </head>
+
+  <body>
+    <div id="simpleSwitchApp"></div>
+  </body>
+</html>
+```
 
 Component Specifications
 ------------------------
