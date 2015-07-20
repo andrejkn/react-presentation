@@ -5,7 +5,7 @@ What is ReactJS?
 ================
 - React is a JS library for creating UIs.
 - Created by Facebook
-- Used to create component
+- Used for creating components
 - Lots of people use React as the V in MVC
 - It is NOT a template library (handlebar.js, mustache.js, ...)
 
@@ -21,8 +21,8 @@ Why ReactJS?
 Virtual DOM
 ===========
 - Solution for unpredictable UI
-- Issues of data binding
-  - bind data model to view
+- Solves the following issues of data binding
+  - bind data-models to views
   - non trivial abstraction
   - key-value observation
   - observables & computed properties
@@ -67,6 +67,18 @@ var MyComponent = React.createClass({
 });
 ```
 
+```javascript
+var Item = React.createClass({
+  render: function() {
+    return (
+      <li>
+        Item {this.props.index}: {this.props.itemContent}
+      </li>
+    );
+  }
+});
+```
+
 We can split out app in components, for example let's consider an app
 which renders a list of items:
 
@@ -91,7 +103,7 @@ var List = React.createClass({
 
         {this.props.items.map(function(item, i) {
           return(
-            <Item key={i} 
+            <Item key={i}
                   index={i}
                   itemContent={item}>
               {item}
