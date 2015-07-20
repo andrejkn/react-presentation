@@ -8,7 +8,7 @@ var List = React.createClass({
 
         {this.props.items.map(function(item, i) {
           return(
-            <Item key={i} 
+            <Item key={i}
                   index={i}
                   itemContent={item}>
               {item}

@@ -56,15 +56,15 @@ React Components
 ================
 Here's a sample React component:
 ```javascript
-  var MyComponent = React.createClass({
-    render: function() {
-      return (
-        <p>
-          My App Component
-        </p>
-      );
-    }
-  });
+var MyComponent = React.createClass({
+  render: function() {
+    return (
+      <p>
+        My App Component
+      </p>
+    );
+  }
+});
 ```
 
 We can split out app in components, for example let's consider an app
@@ -80,6 +80,29 @@ We can split this into 2 component:
 
 ![alt text](https://github.com/andrejkn/react-presentation/blob/master/images/todo/todo2.png "List App")
 
+```javascript
+var List = React.createClass({
+  render: function() {
+    return (
+      <ul>
+        <lh>
+          <b>{this.props.title}</b>
+        </lh>
+
+        {this.props.items.map(function(item, i) {
+          return(
+            <Item key={i} 
+                  index={i}
+                  itemContent={item}>
+              {item}
+            </Item>
+          );
+        })}
+      </ul>
+    );
+  }
+});
+```
 Component Specifications
 ------------------------
 - render
