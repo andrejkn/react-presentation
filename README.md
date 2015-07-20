@@ -44,8 +44,8 @@ m - size of models
 v << m
 
 - data binding:
-memory: O(m)
-runtime: O(1)
+> memory: O(m)
+> runtime: O(1)
 - vDOM
 memory: O(v)
 runtime: O(v)
