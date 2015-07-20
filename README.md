@@ -168,7 +168,7 @@ console.log(myComp.props.color); // 'blue'
 
 #### Props Anti-Pattern
 
-- Mutatind the props could cause unexpected consequences
+- Mutating the props could cause unexpected consequences
 ```javascript
 var pos = {
   x: 123,
