@@ -43,12 +43,12 @@ v - size of view
 m - size of models
 v << m
 
-- data binding:
+Data binding:
 > memory: O(m)
 > runtime: O(1)
-- vDOM
-memory: O(v)
-runtime: O(v)
+Virtual DOM
+> memory: O(v)
+> runtime: O(v)
 
 We can do caching:
 - bring down the runtime
