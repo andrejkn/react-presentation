@@ -66,19 +66,6 @@ var MyComponent = React.createClass({
   }
 });
 ```
-
-```javascript
-var Item = React.createClass({
-  render: function() {
-    return (
-      <li>
-        Item {this.props.index}: {this.props.itemContent}
-      </li>
-    );
-  }
-});
-```
-
 We can split out app in components, for example let's consider an app
 which renders a list of items:
 
@@ -115,6 +102,19 @@ var List = React.createClass({
   }
 });
 ```
+
+```javascript
+var Item = React.createClass({
+  render: function() {
+    return (
+      <li>
+        Item {this.props.index}: {this.props.itemContent}
+      </li>
+    );
+  }
+});
+```
+
 Component Specifications
 ------------------------
 - render
