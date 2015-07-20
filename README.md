@@ -54,6 +54,9 @@ We can do caching:
 
 React Components
 ================
+- When designing front end apps we break down UIs into REUSABLE components
+- Commonly used to extend a basic HTML element
+
 Here's a sample React component:
 ```javascript
 var MyComponent = React.createClass({
@@ -66,8 +69,14 @@ var MyComponent = React.createClass({
   }
 });
 ```
-We can split out app in components, for example let's consider an app
-which renders a list of items:
+
+We can render the component into an existing DOM elemtnt:
+```javascript
+React.render(<MyComponent />,
+             document.getElementById('mainAppElement'));
+```
+
+Consider the following simple application, which renders a list of items and the list's title:
 
 
 ![alt text](https://github.com/andrejkn/react-presentation/blob/master/images/todo/todo1.png "List App")
@@ -78,6 +87,42 @@ We can split this into 2 component:
 
 
 ![alt text](https://github.com/andrejkn/react-presentation/blob/master/images/todo/todo2.png "List App")
+
+```javascript
+var List = React.createClass({
+  render: function() {
+    return (
+      <ul>
+        <lh>
+          // LIST TITLE
+        </lh>
+
+        // LIST OF ITEMS ...
+        // <Item ... />
+        // <Item ... />
+        // ...
+      </ul>
+    );
+  }
+});
+```
+
+```javascript
+var Item = React.createClass({
+  render: function() {
+    return (
+      <li>
+        // Content of this ITEM
+      </li>
+    );
+  }
+});
+```
+
+Props
+-----
+Before we go any further with the List example,
+let's look at Component Properties.
 
 ```javascript
 var List = React.createClass({
@@ -115,6 +160,17 @@ var Item = React.createClass({
 });
 ```
 
+State
+-----
+- Components === State Machines
+  - UI Consistency
+  - Update states ==> rerendering the component
+  - updating the DOM
+- What are component state?
+- What should go in state?
+- What should NOT go in state?
+
+
 Component Specifications
 ------------------------
 - render
@@ -136,19 +192,6 @@ Lifecycle Methods
   - componentWillUpdate()
   - componentDidUpdate()
   - componentWillUnmount()
-
-Props
------
-
-State
------
-- Components === State Machines
-  - UI Consistency
-  - Update states ==> rerendering the component
-  - updating the DOM
-- What are component state?
-- What should go in state?
-- What should NOT go in state?
 
 
 JSX
