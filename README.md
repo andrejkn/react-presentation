@@ -43,13 +43,11 @@ v - size of view
 m - size of models
 v << m
 
-Data binding:
-> memory: O(m)
-> runtime: O(1)
-
-Virtual DOM
-> memory: O(v)
-> runtime: O(v)
+|        | Data binding | Virtual DOM|
+|--------|:------------:|-----------:|
+|memory  | O(m)         | O(v)       | 
+|runtime | O(1)         | O(v)       |
+|--------|--------------|------------|
 
 We can do caching:
 - bring down the runtime
@@ -69,6 +67,13 @@ Here's a sample React component:
     }
   });
 ```
+
+We can split out app in components, for example let's consider an app
+which renders a list of items:
+
+
+![alt text](https://github.com/andrejkn/react-presentation/blob/master/images/todo/todo1.png "List App")
+
 Component Specifications
 ------------------------
 - render
