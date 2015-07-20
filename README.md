@@ -252,7 +252,7 @@ var Todo = React.createClass({
 
 React.render(<Todo />, TodoApp);
 ```
-
+We would have the following line in our HTML file:
 ```html
 ...
   <div id="todoApp"></div>
