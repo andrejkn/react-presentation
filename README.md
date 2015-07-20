@@ -272,7 +272,6 @@ React.render(<SimpleSwitch />, document.getElementById('simpleSwitchApp'));
 <html>
 
   <head>
-    <link href="./styles/circuit.css" rel="stylesheet" />
     <script src="/bower_components/react/react.js"></script>
     <script src="/bower_components/react/JSXTransformer.js"></script>
     <script type="text/jsx" src="./components/simple-switch.jsx"></script>
