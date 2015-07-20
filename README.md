@@ -44,10 +44,9 @@ m - size of models
 v << m
 
 |        | Data binding | Virtual DOM|
-|--------|:------------:|-----------:|
-|memory  | O(m)         | O(v)       | 
+|--------|:------------:|:----------:|
+|memory  | O(m)         | O(v)       |
 |runtime | O(1)         | O(v)       |
-|--------|--------------|------------|
 
 We can do caching:
 - bring down the runtime
