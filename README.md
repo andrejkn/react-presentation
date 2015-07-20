@@ -46,6 +46,7 @@ v << m
 Data binding:
 > memory: O(m)
 > runtime: O(1)
+
 Virtual DOM
 > memory: O(v)
 > runtime: O(v)
