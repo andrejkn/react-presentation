@@ -166,7 +166,28 @@ var myComp = <MyComponent {...props} color={'blue'} />
 console.log(myComp.props.color); // 'blue'
 ```
 
-- Let's look at our List example:
+#### Props Anti-Pattern
+
+- Mutatind the props could cause unexpected consequences
+```javascript
+var pos = {
+  x: 123,
+  y: 34
+};
+
+var myComp = <MyComponent color='green'
+                          x={pos.x}
+                          y={pos.y} />
+myComp.props.x = 23; // Not a good idea!
+```
+
+#### List example continued ...
+
+- Let's look at our List example and see how we can use component
+props to pass attributes to our List and Item components
+- Also we will learn how to create repeated instances of components
+  - Simmilar to ng-repeat in AngularJS
+  - In React we use map() function for that purpose
 
 ```javascript
 var List = React.createClass({
@@ -204,20 +225,6 @@ var Item = React.createClass({
 });
 ```
 
-#### Props Anti-Pattern
-
-- Mutatind the props could cause unexpected consequences
-```javascript
-var pos = {
-  x: 123,
-  y: 34
-};
-
-var myComp = <MyComponent color='green'
-                          x={pos.x}
-                          y={pos.y} />
-myComp.props.x = 23; // Not a good idea!
-```
 
 State
 -----
