@@ -226,11 +226,11 @@ var Item = React.createClass({
 ```
 
 #### TODO App - reusing our List component
-- Let's say we hav an array of TODO Items
-- And we want to render them on the screen
-- We can create a Todo component and 
+- Let's say we have an array of TODO items
+- and we want to render them on the screen
+- We can create a Todo component
   - which is our main APP component
-  - and use List and Item component in it
+  - and use List and Item components in it
 
 ```javascript
 var TodoApp = document.getElementById('todoApp');
@@ -239,9 +239,9 @@ var Todo = React.createClass({
   render: function() {
     var todoList = [
       'Drive to work',
-      'Give a compliment to LisaMarie',
+      'Check emails',
       'Make coffee',
-      'Leave the used cup in the sink'
+      'Put the used coffee cup in the dish washer'
     ];
 
     return (
@@ -251,6 +251,12 @@ var Todo = React.createClass({
 });
 
 React.render(<Todo />, TodoApp);
+```
+
+```html
+...
+  <div id="todoApp"></div>
+...
 ```
 
 State
