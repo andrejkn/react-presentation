@@ -135,8 +135,8 @@ var myComp = <MyComponent color={'green'}
                           y={pos.y} />
 ```
 
-Spread Attrinutes
-=================
+### Spread Attrinutes
+
 - JSX feature
 - Using the ... operator for arrays
 
@@ -202,8 +202,8 @@ var Item = React.createClass({
 });
 ```
 
-Props Anti-Pattern
-==================
+#### Props Anti-Pattern
+
 - Mutatind the props could cause unexpected consequences
 ```javascript
 var pos = {
