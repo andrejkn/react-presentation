@@ -175,7 +175,7 @@ var pos = {
   y: 34
 };
 
-var myComp = <MyComponent color='green'
+var myComp = <MyComponent color={'green'}
                           x={pos.x}
                           y={pos.y} />
 myComp.props.x = 23; // Not a good idea!
