@@ -55,7 +55,7 @@ We can do caching:
 React Components
 ================
 - When designing front end apps we break down UIs into REUSABLE components
-- Commonly used to extend a basic HTML element
+- React Components are commonly used to extend a basic HTML element
 
 Here's a sample React component:
 ```javascript
@@ -125,6 +125,48 @@ Before we go any further with the List example,
 let's look at Component Properties.
 
 ```javascript
+var pos = {
+  x: 123,
+  y: 34
+};
+
+var myComp = <MyComponent color={'green'}
+                          x={pos.x}
+                          y={pos.y} />
+```
+
+Spread Attrinutes
+=================
+- JSX feature
+- Using the ... operator for arrays
+
+```javascript
+var props = {
+  color: 'white',
+  x: 123,
+  y: 34
+};
+
+var myComp = <MyComponent {...props} />
+```
+
+- We can combine multiple attributes
+- Later attributes override previous ones
+```javascript
+var props = {
+  color: 'white',
+  x: 123,
+  y: 34
+};
+
+// Override previous value of color
+var myComp = <MyComponent {...props} color={'blue'} />
+console.log(myComp.props.color); // 'blue'
+```
+
+- Let's look at our List example:
+
+```javascript
 var List = React.createClass({
   render: function() {
     return (
@@ -159,6 +201,22 @@ var Item = React.createClass({
   }
 });
 ```
+
+Props Anti-Pattern
+==================
+- Mutatind the props could cause unexpected consequences
+```javascript
+var pos = {
+  x: 123,
+  y: 34
+};
+
+var myComp = <MyComponent color='green'
+                          x={pos.x}
+                          y={pos.y} />
+myComp.props.x = 23; // Not a good idea!
+```
+
 
 State
 -----
