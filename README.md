@@ -262,18 +262,21 @@ We would have the following line in our HTML file:
 State
 -----
 - Components === State Machines
-  - UI Consistency
-  - Update states ==> rerendering the component
-  - updating the DOM
+  - They ensure UI Consistency
+  - Update states cause rerendering the view of the component
+  by updating the DOM with the new changes
 - What are component state?
 - What should go in state?
 - What should NOT go in state?
 
-Let's extend out TODO app and make it more dynamic, by adding an input
-field for entering our TODO items.
+Let's extend our TODO app and make it more dynamic, by adding an input
+field for entering our TODO items. Also, by pressing the RETURN
+key it will fire an event which will call callback handler.
+
+![alt text](https://github.com/andrejkn/react-presentation/blob/master/images/todo/todo3.png "List App")
 
 Note that in order make the TODO app re-render every time a change was
-made to the TODO list, we need to put that array of items in the state 
+made of the list, we need to put that array of items in the state
 of the component:
 
 ```javascript
