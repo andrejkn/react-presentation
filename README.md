@@ -269,7 +269,52 @@ State
 - What should go in state?
 - What should NOT go in state?
 
-> simple-switch.jsx
+Let's extend out TODO app and make it more dynamic, by adding an input
+field for entering our TODO items.
+
+Note that in order make the TODO app re-render every time a change was
+made to the TODO list, we need to put that array of items in the state 
+of the component:
+
+```javascript
+var DynamicTodoApp = document.getElementById('dynamicTodoApp');
+
+var DynamicTodo = React.createClass({
+  getInitialState: function() {
+    return {
+      todoList: []
+    };
+  },
+
+  render: function() {
+    return (
+      <div>
+        <input type={'text'} id={'newItemInput'}
+               onKeyDown={this._addItem} />
+        <List title={'My plans for today'} items={this.state.todoList} />
+      </div>
+    );
+  },
+
+  _addItem: function(e) {
+    if(e.which !== 13) return;
+    var newItem = document.getElementById('newItemInput').value;
+    var newList = _.clone(this.state.todoList);
+    newList.push(newItem);
+
+    this.setState({
+      todoList: newList
+    });
+  }
+});
+
+React.render(<DynamicTodo />, DynamicTodoApp);
+```
+
+Let's also look at another example app, whish would change a state of a
+component caused by click event:
+
+##### simple-switch.jsx
 
 ```javascript
 var SimpleSwitch = React.createClass({
@@ -304,7 +349,7 @@ var SimpleSwitch = React.createClass({
 React.render(<SimpleSwitch />, document.getElementById('simpleSwitchApp'));
 ```
 
-> simple-switch.html
+##### simple-switch.html
 
 ```html
 <!DOCTYPE html>

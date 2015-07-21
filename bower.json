@@ -8,6 +8,6 @@
   "license": "MIT",
   "dependencies" : {
     "react": "*",
-    "react-tools": "*"
+    "lodash": "~3.10"
   }
 }

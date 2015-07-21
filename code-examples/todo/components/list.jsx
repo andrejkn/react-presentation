@@ -7,6 +7,7 @@ var List = React.createClass({
         </lh>
 
         {this.props.items.map(function(item, i) {
+          console.log('List:render ', item);
           return(
             <Item key={i}
                   index={i}
