@@ -35,7 +35,6 @@ var Movable = React.createClass({
       },
       isDragging: true
     });
-    console.log(this.state.initialCoords);
   },
 
   _handleMouseUp: function() {

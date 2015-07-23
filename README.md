@@ -54,7 +54,7 @@ We can do caching:
 
 React Components
 ================
-- When designing front end apps we break down UIs into REUSABLE components
+- When designing front-end apps we break down UIs into REUSABLE components
 - React Components are commonly used to extend a basic HTML element
 
 Here's a sample React component:
@@ -70,13 +70,13 @@ var MyComponent = React.createClass({
 });
 ```
 
-We can render the component into an existing DOM elemtnt:
+We can render the component into an existing DOM element:
 ```javascript
 React.render(<MyComponent />,
              document.getElementById('mainAppElement'));
 ```
 
-Consider the following simple application, which renders a list of items and the list's title:
+Consider the following simple application, which renders a list of items and the title of that list:
 
 
 ![alt text](https://github.com/andrejkn/react-presentation/blob/master/images/todo/todo1.png "List App")

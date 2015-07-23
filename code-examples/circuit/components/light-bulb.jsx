@@ -6,7 +6,6 @@ var LightBulb = React.createClass({
   },
 
   render: function() {
-    console.log('light-bulb: render ', this.props.isLightOn);
     return (
       <img onClick={this._handleClick}
            src={this._getImageSource()} />
@@ -25,7 +24,6 @@ var LightBulb = React.createClass({
   },
 
   _handleClick: function() {
-    console.log('light-bulb: click ', !this.state.isOn);
     this.setState({
       isOn: !this.state.isOn
     });

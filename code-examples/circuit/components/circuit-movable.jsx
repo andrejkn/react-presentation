@@ -16,9 +16,13 @@ var CircuitBoard = React.createClass({
 
     return (
       <div style={circuitStyle}>
-        <Blob age='33'/>
-        <LightBulb isLightOn={this.state.isLightBulbOn} />
-        <Switch clickHandler={this._lightBulbSwitch} />
+        <Movable>
+          <LightBulb isLightOn={this.state.isLightBulbOn} />
+        </Movable>
+
+        <Movable>
+          <Switch clickHandler={this._lightBulbSwitch} />
+        </Movable>
       </div>
     );
   },
