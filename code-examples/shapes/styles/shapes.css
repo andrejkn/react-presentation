@@ -1,0 +1,20 @@
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: #ff0000;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #00ff00;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #0000ff;
+}
