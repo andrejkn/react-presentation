@@ -16,7 +16,6 @@ var CircuitBoard = React.createClass({
 
     return (
       <div style={circuitStyle}>
-        <Blob age='33'/>
         <LightBulb isLightOn={this.state.isLightBulbOn} />
         <Switch clickHandler={this._lightBulbSwitch} />
       </div>
